@@ -18,11 +18,11 @@ const List = ({token}) => {
                     toast.error(response.data.message);
                 }
             } catch (error) {
-                toast.error(response.data.message);
+                toast.error(response.data?.message || "Error");
             }
 
         })()
-    }, [list])
+    }, [])
     
     const removeProduct = async (id) => {
         try {

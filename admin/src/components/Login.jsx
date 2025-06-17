@@ -9,13 +9,15 @@ const Login = ({ setToken }) => {
     try {
         
         e.preventDefault();
-        console.log(email,password);
+        // console.log(email,password);
         
         
       const response = await axiosInstance.post("/user/admin", {
         email,
         password,
       });
+      console.log(response);
+      
         
 
         if (response.status === 200) {

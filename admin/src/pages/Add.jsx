@@ -48,6 +48,7 @@ const Add = ({token}) => {
                 },
               }
             );
+              console.log(response);
               
             if (response.status === 200) {
                 toast.success(response.data.message)

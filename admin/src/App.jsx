@@ -11,7 +11,7 @@ import axios from "axios";
 
 
 export const axiosInstance = axios.create({
-  baseURL: "http://localhost:4000/api"
+  baseURL: "https://forever-backend-mu-five.vercel.app/api",
 });
 
 export const currency = '$'
