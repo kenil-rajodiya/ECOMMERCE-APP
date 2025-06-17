@@ -22,7 +22,7 @@ const Add = ({token}) => {
     const onSubmitHandler = async (e) => {
         e.preventDefault();
         try {
-            // console.log(token);
+            console.log(token);
             
             let formData = new FormData()
 
