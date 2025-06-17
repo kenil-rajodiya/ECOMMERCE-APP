@@ -18,7 +18,16 @@ connectCloudinary()
 // middlewares
 
 app.use(express.json())
-app.use(cors())
+app.use(cors({
+    origin: [
+        'http://localhost:5174',                 // local admin frontend
+        'http://localhost:5173',                 // local user frontend (optional)
+        'https://admin-frontend.vercel.app',     // deployed admin site
+        'https://shop-frontend.vercel.app'       // deployed user site
+    ],
+    credentials: true,
+}));
+  
 
 // Api endpoints
 app.use('/api/user', userRouter)
