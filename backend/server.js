@@ -18,23 +18,7 @@ connectCloudinary()
 // middlewares
 
 app.use(express.json())
-const allowedOrigins = [
-    'http://localhost:5174',
-    'http://localhost:5173',
-    'https://your-admin-frontend.vercel.app',
-    'https://your-user-frontend.vercel.app'
-];
-
-app.use(cors({
-    origin: function (origin, callback) {
-        if (!origin || allowedOrigins.includes(origin)) {
-            callback(null, true);
-        } else {
-            callback(new Error('Not allowed by CORS'));
-        }
-    },
-    credentials: true
-}));
+app.use(cors())
   
 
 // Api endpoints
