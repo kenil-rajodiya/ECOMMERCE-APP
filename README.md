@@ -8,7 +8,7 @@ A full-featured **MERN + Tailwind CSS** e-commerce application with both user an
 
 - **User Frontend (shop)**: (https://ecommerce-frontend-eight-livid.vercel.app/)
 - **Admin Dashboard**: (https://ecommerce-admin-nu-eosin.vercel.app/)
-- **Backend API**: [https://forever-backend.vercel.app/api](https://forever-backend.vercel.app/api)  
+- **Backend API**: (https://ecommerce-backend-ruddy-seven.vercel.app/) 
 - **GitHub Repo**: [https://github.com/kenil-rajodiya/ECOMMERCE-APP](https://github.com/kenil-rajodiya/ECOMMERCE-APP)
 
 ---
@@ -46,3 +46,6 @@ A full-featured **MERN + Tailwind CSS** e-commerce application with both user an
 - Payment integration with Stripe/Razorpay  
 
 ---
+## For admin panel email and password :
+ADMIN_EMAIL=kenilarajodiya2005@gmail.com,
+ADMIN_PASSWORD=@2005kenl
