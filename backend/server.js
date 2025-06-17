@@ -18,14 +18,22 @@ connectCloudinary()
 // middlewares
 
 app.use(express.json())
+const allowedOrigins = [
+    'http://localhost:5174',
+    'http://localhost:5173',
+    'https://your-admin-frontend.vercel.app',
+    'https://your-user-frontend.vercel.app'
+];
+
 app.use(cors({
-    origin: [
-        'http://localhost:5174',                 // local admin frontend
-        'http://localhost:5173',                 // local user frontend (optional)
-        'https://admin-frontend.vercel.app',     // deployed admin site
-        'https://shop-frontend.vercel.app'       // deployed user site
-    ],
-    credentials: true,
+    origin: function (origin, callback) {
+        if (!origin || allowedOrigins.includes(origin)) {
+            callback(null, true);
+        } else {
+            callback(new Error('Not allowed by CORS'));
+        }
+    },
+    credentials: true
 }));
   
 
@@ -38,6 +46,7 @@ app.use('/api/order', orderRouter)
 app.get('/', (req, res) => {
     res.send("Api working")
 })
-
-export default app;
-
+app.listen(port, () => {
+    console.log('App is listening on port 4000');
+    
+})

@@ -10,15 +10,15 @@ const List = ({token}) => {
             try {
                 const response = await axiosInstance.get("/product/list");
     
-                if (response.data.success) {
+                if (response?.data?.success) {
                     setList(response.data.data);
                     console.log
                     (response.data);
                 } else {
-                    toast.error(response.data.message);
+                    toast.error(response?.data.message);
                 }
             } catch (error) {
-                toast.error(response.data?.message || "Error");
+                toast.error("Error");
             }
 
         })()
