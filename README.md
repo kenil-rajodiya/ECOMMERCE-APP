@@ -7,7 +7,7 @@ A full-featured **MERN + Tailwind CSS** e-commerce application with both user an
 ## 🚀 Live Demo & Code
 
 - **User Frontend (shop)**: (https://ecommerce-frontend-eight-livid.vercel.app/)
-- **Admin Dashboard**: [https://forever-admin.vercel.app](https://forever-admin.vercel.app)  
+- **Admin Dashboard**: (https://ecommerce-admin-nu-eosin.vercel.app/)
 - **Backend API**: [https://forever-backend.vercel.app/api](https://forever-backend.vercel.app/api)  
 - **GitHub Repo**: [https://github.com/kenil-rajodiya/ECOMMERCE-APP](https://github.com/kenil-rajodiya/ECOMMERCE-APP)
 
