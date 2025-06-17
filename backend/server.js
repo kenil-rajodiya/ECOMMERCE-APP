@@ -18,7 +18,12 @@ connectCloudinary()
 // middlewares
 
 app.use(express.json())
-app.use(cors())
+app.use(cors({
+    origin: ['http://localhost:5174', 'https://your-frontend-domain.com'], // Add frontend domains
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true
+}));
+  
 
 // Api endpoints
 app.use('/api/user', userRouter)
@@ -30,7 +35,5 @@ app.get('/', (req, res) => {
     res.send("Api working")
 })
 
-app.listen(port, () => {
-    console.log('Server is running on 4000 port');
+export default app;
 
-})
